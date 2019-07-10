@@ -20,11 +20,12 @@ public class RegresionLinealCorrelacionSimpleTestU7 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int x = 0;
+//        int x = 0;
         ArrayList<Double> tx = new ArrayList();
         ArrayList<Double> ty = new ArrayList();
 
-        while (x == 0) {
+        System.out.println("Dar una letra para ver los resultados");
+        while (true) {
             try {
                 System.out.println("Introducir valor de X");
                 double w = new Scanner(System.in).nextDouble();
@@ -34,7 +35,7 @@ public class RegresionLinealCorrelacionSimpleTestU7 {
                 ty.add(q);
                 
             } catch (Exception e) {
-                x = -1;
+                break;
             }
         }
 

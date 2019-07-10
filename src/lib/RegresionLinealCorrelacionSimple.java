@@ -19,7 +19,7 @@ public class RegresionLinealCorrelacionSimple {
     private double mx;//x sobre y
     private double bx;//x sobre y
     private final ArrayList<Double> tablaX, tablaY;
-    private int n_datos;
+    private int nDatos;
     private double r;
     private double r2;
     private double t; //prueba t para el coeficiente de correlacion -> ocupar tabla t-student para interpretar resultado
@@ -27,7 +27,7 @@ public class RegresionLinealCorrelacionSimple {
     public RegresionLinealCorrelacionSimple(ArrayList<Double> tablaX, ArrayList<Double> tablaY) {
         this.tablaX = tablaX;
         this.tablaY = tablaY;
-        this.n_datos = this.tablaX.size();
+        this.nDatos = this.tablaX.size();
     }
 
     public ArrayList<Double> getTablaX() {
@@ -39,7 +39,7 @@ public class RegresionLinealCorrelacionSimple {
     }
 
     public int getN_datos() {
-        return n_datos;
+        return nDatos;
     }
 
     public Double getSumatoriaX() {
@@ -194,7 +194,7 @@ public class RegresionLinealCorrelacionSimple {
     }
     
     public void setT(double r, int n_datos) {
-        this.n_datos = n_datos;
+        this.nDatos = n_datos;
         double t1 = r*Math.sqrt(n_datos-2);
         double t2 = Math.sqrt(1-Math.pow(r, 2));
         this.t = t1/t2;
